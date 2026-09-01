@@ -1,0 +1,11 @@
+# Read by the platform at deploy time. Without it an integration-as-api component builds
+# but exposes no endpoint.
+endpoints:
+  - name: greeting
+    displayName: Greeting API
+    service:
+      basePath: /greeting
+      port: 9090
+    type: REST
+    networkVisibilities:
+      - Public
